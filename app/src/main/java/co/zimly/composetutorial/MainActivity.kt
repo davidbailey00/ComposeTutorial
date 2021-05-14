@@ -5,9 +5,11 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
@@ -32,7 +34,8 @@ fun NewsStory() {
             contentDescription = null,
             modifier = Modifier
                 .height(180.dp)
-                .fillMaxWidth(),
+                .fillMaxWidth()
+                .clip(shape = RoundedCornerShape(4.dp)),
             contentScale = ContentScale.Crop
         )
         Spacer(Modifier.height(16.dp))
